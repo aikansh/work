@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Facebook Connect For Chrome Extension</title>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '139191842949613',                        // App ID from the app dashboard
+      channelUrl : 'birthday-notifier.herokuapp.com', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "http://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+  alert("authenticated");
+    // the user is logged in and has authenticated your
+    // app, and response.authResponse supplies
+    // the user's ID, a valid access token, a signed
+    // request, and the time the access token 
+    // and signed request each expire
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+  } else if (response.status === 'not_authorized') {
+   alert("not_authorized");
+   // the user is logged in to Facebook, 
+    // but has not authenticated your app
+  } else {
+  alert("not_loged in");
+    // the user isn't logged in to Facebook.
+  }
+ });
+
+</script>
+  </body>
+</html>
