@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+	
+      body {
+        min-width: 120px;
+        overflow-x: hidden;
+		
+      }
+	  
+
+.tablecontainer
+{
+	padding:0 px;
+	margin:0px;
+	border:none;
+}
+input[type="text"]{
+	width:99%;
+	align:center;
+	height:40px;
+	
+}
+input[type="button"]{
+    width: 100%;
+    height: 30px;
+	padding:10px;
+    margin-top: 1px;
+    text-shadow: 0px -1px 0px #5b6ddc;
+    
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	
+        
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+   
+  
+ }
+
+.tablecontainer tr{
+border:none;
+margin:-10px;
+padding:-10px;
+
+}
+.tablecontainer td{
+border:none;
+margin:-10px;
+padding:-10px;
+}
+      img {
+        
+        border: 4px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+</style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body bgcolor="#585858">
+<CENTER>
+<FORM name="Keypad" action="">
+<B>
+	
+	<TABLE class="tablecontainer" border=2 width=50 height=60>
+	<TR>
+		<TD colspan="4">
+			<input id="console" name="ReadOut" type="Text"/>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+		</TD>
+		<TD>
+		</TD>
+		<TD>
+			<input name="btnPercent" type="Button" class="myButton"  value="%">
+		</TD>
+		<TD>
+			<input id="btnclear" name="btnClear" type="Button"  class="myButton" value="C">
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD>
+			<input id="btn7" name="btnSeven" type="Button" class="myButton" value="7">
+		</TD>
+		<TD>
+			<input id="btn8"  name="btnEight" type="Button" class="myButton"  value="8">
+		</TD>
+		<TD>
+			<input id="btn9" name="btnNine" type="Button" class="myButton"  value="9">
+		</TD>
+		<TD>
+		<input id="btn/"  name="btnDivide" class="myButton"  type="Button" value="/">
+		</TD>
+		
+	</TR>
+	
+	<TR>
+		<TD>
+			<input id="btn4" name="btnFour" type="Button" class="myButton"  value="4">
+		</TD>
+		<TD>
+			<input id="btn5"  name="btnFive" type="Button" class="myButton"  value="5">
+		</TD>
+		<TD>
+			<input id="btn6" name="btnSix" type="Button" class="myButton"  value="6">
+		</TD>
+		
+		<TD>
+			<input id="btn+" name="btnPlus"  class="myButton" type="Button" value="+" >
+		</TD>
+		
+	</TR>
+	<TR>
+		<TD>
+			<input id="btn1" name="btnOne" type="Button" class="myButton"  value="1">
+		</TD>
+		<TD>
+			<input id="btn2" name="btnTwo" type="Button"  class="myButton" value="2">
+		</TD>
+		<TD>
+			<input id="btn3" name="btnThree" type="Button" class="myButton"  value="3">
+		</TD>
+		<TD>
+		<input id="btn*" name="btnMultiply" class="myButton"  type="Button" value="*">
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD>
+			<input id="btn0" name="btnZero" type="Button" class="myButton"  value="0">
+		</TD>
+		<TD>
+			<input name="btnDecimal" type="Button" class="myButton"  value=".">
+		</TD>
+		<TD>
+			<input id="btn=" name="btnEquals" type="Button"  class="myButton" value="=">
+		</TD>
+		<TD>
+		<input id="btn-" name="btnMinus" type="Button" class="myButton"  value="-" />
+		</TD>
+		
+	</TR>
+</TABLE>
+</B>
+</FORM>
+</CENTER>
+
+  </body>
+</html>
+

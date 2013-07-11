@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Calculator",
+  "description": "Basic Calculator for quick Usage",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs", 
+        "http://*/*", 
+        "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "calc.jpg",
+    "default_popup": "popup.html"
+  }
+}
